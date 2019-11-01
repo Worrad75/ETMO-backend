@@ -1,2 +1,13 @@
 class UsersController < ApplicationController
+
+    def create
+        byebug
+
+        user = User.new(username: params[:username], password: params[:password])
+        if user.save
+            render json: user
+        else
+            render json: {errors: user.errors.full_messages}
+        end
+    end
 end

@@ -3,26 +3,26 @@ User.destroy_all
 Word.destroy_all
 Favorite.destroy_all
 
-puts "making users..."
-darrow = User.create!(name: "Darrow")
-ryan = User.create!(name: "Ryan")
-jason = User.create!(name: "Jason")
-dan = User.create!(name: "Dan"
-belinda = User.create!(name: "Belinda")
+# puts "making users..."
+# darrow = User.create!(name: "Darrow")
+ryan = User.create!(username: "Ryan", password: "1234")
+# jason = User.create!(name: "Jason")
+# dan = User.create!(name: "Dan"
+# belinda = User.create!(name: "Belinda")
 
 
-puts "fetching word string..."
-                            #"https://od-api.oxforddictionaries.com/api/v2/entries/en-us/${desiredWord}""
-word_string = RestClient.get('https://od-api.oxforddictionaries.com/api/v2/entries/en-us/example', { "app_id" => 'd654645f', "app_key" => 'c2340027dab4d00e48ec8dc3e435d6ab' })
-puts "parsing into hash..."
-word_hash = JSON.parse(word_string)
-puts "creating word..."
-w1 = Word.create!(spelling: word_hash["word"])
+# puts "fetching word string..."
+#                             #"https://od-api.oxforddictionaries.com/api/v2/entries/en-us/${desiredWord}""
+# word_string = RestClient.get('https://od-api.oxforddictionaries.com/api/v2/entries/en-us/example', { "app_id" => 'd654645f', "app_key" => 'c2340027dab4d00e48ec8dc3e435d6ab' })
+# puts "parsing into hash..."
+# word_hash = JSON.parse(word_string)
+# puts "creating word..."
+# w1 = Word.create!(spelling: word_hash["word"])
 
-puts "creating favorites..."
-Favorite.create!(user: darrow, word: w1)
-Favorite.create!(user: ryan, word: w1)
-Favorite.create!(user: belinda, word: w1)
+# puts "creating favorites..."
+# Favorite.create!(user: darrow, word: w1)
+# Favorite.create!(user: ryan, word: w1)
+# Favorite.create!(user: belinda, word: w1)
 
 
 #-----------------------------------------------------------------
