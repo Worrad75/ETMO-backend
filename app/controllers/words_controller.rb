@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
 
     def create
-        byebug
+        # byebug
     end
 end

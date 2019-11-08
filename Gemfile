@@ -22,6 +22,7 @@ gem 'bcrypt', '~> 3.1.7'
 #---------------------
 gem 'rest-client'
 gem 'pg', '~> 0.18'
+gem 'active_model_serializers'
 #---------------------
 
 # Reduces boot times through caching; required in config/boot.rb

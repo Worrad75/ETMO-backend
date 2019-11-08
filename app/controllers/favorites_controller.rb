@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
 
     def create
-        byebug
+        # byebug
         # params[:user_id]
         # params[:word]
         user = User.find_by(id: params[:user_id])
@@ -14,7 +14,7 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
-        byebug
+        # byebug
         # params[:favorite_id]
         favorite = Favorite.find_by(id: params[:favorite_id])
         favorite.destroy
