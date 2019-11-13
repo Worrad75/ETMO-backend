@@ -3,13 +3,15 @@ class UserSerializer < ActiveModel::Serializer
 
   def favorites
     self.object.favorites.map do |favorite|
-        {word: favorite.word}
+        {   id: favorite.id,
+            word: favorite.word}
     end 
   end
 
   def searches
     self.object.searches.map do |search|
-        {word: search.word}
+        {   id: search.id,
+            word: search.word}
     end
   end
 end

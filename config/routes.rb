@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   post "/new_search", to: "searches#create"
   post "/favorite_word", to: "favorites#create"
-  delete "/unfavorite_word", to: "favorites#destroy"
+  delete "/unfavorite_word/:id", to: "favorites#destroy"
   post "/signup", to: "users#create"
   post "/login", to: "auth#login"
   get "/auto_login", to: "auth#auto_login"

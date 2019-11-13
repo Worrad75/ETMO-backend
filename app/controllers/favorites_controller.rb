@@ -14,10 +14,10 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
-        # byebug
-        # params[:favorite_id]
-        favorite = Favorite.find_by(id: params[:favorite_id])
+        # params[:id]
+        favorite = Favorite.find_by(id: params[:id])
         favorite.destroy
+        render json: favorite
     end
 
 end
